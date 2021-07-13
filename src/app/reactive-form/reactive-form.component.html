@@ -1,0 +1,20 @@
+<form [formGroup]="form">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input formControlName="name" type="text" id="name" class="form-control">
+        <div *ngIf="name!.touched">
+            <app-validation-error [errors]="name!.errors"
+             [errorPrefix]="'Name'"></app-validation-error>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="comment">Comment</label>
+        <input formControlName="comment" type="text" id="comment" class="form-control">
+        <div *ngIf="comment!.touched">
+            <app-validation-error [errors]="comment!.errors" 
+            [errorPrefix]="'Comment'"></app-validation-error>
+        </div>
+    </div>
+    <div>{{form.get('name')!.value}}</div>
+    <div>{{form.get('comment')!.value}}</div>
+</form>

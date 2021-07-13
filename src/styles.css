@@ -2,5 +2,10 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 
 body{
-    padding: 20px;
+    padding: 100px;
+}
+
+.form-control.ng-invalid.ng-touched
+{
+    border: 2px solid red;
 }

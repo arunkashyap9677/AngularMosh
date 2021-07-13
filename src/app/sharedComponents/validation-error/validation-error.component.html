@@ -1,0 +1,5 @@
+<div class="alert alert-danger" *ngIf="errors && errors.required">{{errorPrefix}} is Required</div>
+<div class="alert alert-danger" *ngIf="errors && errors.minlength">{{errorPrefix}} needs at least {{errors.minlength.requiredLength}} characters</div>
+<div class="alert alert-danger" *ngIf="errors && errors.maxlength">{{errorPrefix}} cannot have more than</div>
+<div class="alert alert-danger" *ngIf="errors && errors.noSpaceAllowed">{{errorPrefix}} cannot contain spaces</div>
+
