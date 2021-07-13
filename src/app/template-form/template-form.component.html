@@ -1,0 +1,18 @@
+<form>
+    <div>
+        <label for="txtinput" class="form-label">Name</label>
+        <input ngModel required name="inputValue" #myVar="ngModel" id="txtinput" type="text" (change)="showNgModelObject(myVar)" class="form-control">
+        <div class="alert alert-danger" *ngIf="!myVar.valid && myVar.touched">Field is Invalid</div>
+    </div>
+    <div>
+        <label for="txtComments" class="form-label">Comment</label>
+        <textarea ngModel required name="textareaValue" #myVar2="ngModel" id="txtComments" class="form-control" cols="30" rows="10"></textarea>
+        <div class="alert alert-danger" *ngIf="!myVar2.valid && myVar2.touched">Field is Invalid</div>
+    </div>
+    <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button class="btn btn-primary">Save</button>
+</form>
+

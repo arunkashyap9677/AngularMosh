@@ -6,5 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'AngularMosh';
+  title = 'Hello';
+  isFullParent = false;
+  viewMode = 'list';
+
+  constructor() { 
+
+  }
+
+  ngOnInit(): void {
+  }
+
+  ToggleAlarmParent(istoggle: boolean)
+  {
+    console.log("ToggleAlarmParent clicked", istoggle);
+  }
 }
