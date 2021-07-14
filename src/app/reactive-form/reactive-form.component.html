@@ -2,6 +2,7 @@
     <div class="form-group">
         <label for="name">Name</label>
         <input formControlName="name" type="text" id="name" class="form-control">
+        <div *ngIf="name!.pending">checking for uniqueness</div>
         <div *ngIf="name!.touched">
             <app-validation-error [errors]="name!.errors"
              [errorPrefix]="'Name'"></app-validation-error>

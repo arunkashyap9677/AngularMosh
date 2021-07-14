@@ -10,7 +10,8 @@ import { InputFieldValidator } from '../sharedComponents/Validators/inputValidat
 export class ReactiveFormComponent implements OnInit {
 
   form: FormGroup = new FormGroup({
-    name: new FormControl('', [Validators.required, Validators.minLength(3), InputFieldValidator.NoSpaceAllowed]),
+    name: new FormControl('', [Validators.required, Validators.minLength(3), 
+          InputFieldValidator.NoSpaceAllowed], InputFieldValidator.CheckUniqueNames),
     comment: new FormControl('',Validators.required)
   });
   constructor() { }

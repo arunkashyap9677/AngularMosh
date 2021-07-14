@@ -2,4 +2,6 @@
 <div class="alert alert-danger" *ngIf="errors && errors.minlength">{{errorPrefix}} needs at least {{errors.minlength.requiredLength}} characters</div>
 <div class="alert alert-danger" *ngIf="errors && errors.maxlength">{{errorPrefix}} cannot have more than</div>
 <div class="alert alert-danger" *ngIf="errors && errors.noSpaceAllowed">{{errorPrefix}} cannot contain spaces</div>
-
+<div class="alert alert-danger" *ngIf="errors && errors.notUnique">{{errorPrefix}} is not unique</div>
+<div class="alert alert-danger" *ngIf="errors && errors.passwordMatchFail">{{errorPrefix}} does not match</div>
+<div class="alert alert-danger" *ngIf="errors && errors.notEqual">{{errorPrefix}} does not match</div>

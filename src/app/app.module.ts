@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TemplateFormComponent } from './template-form/template-form.component';
 import { ValidationErrorComponent } from './sharedComponents/validation-error/validation-error.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,8 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     TextFormatterPipe,
     TemplateFormComponent,
     ValidationErrorComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    ResetPasswordComponent
   ],
   imports: [
     BrowserModule,
