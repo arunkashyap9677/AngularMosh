@@ -1,0 +1,6 @@
+<input type="text" #inputTitle (keyup.enter)="createPost(inputTitle)" class="form-group"> 
+<ul class="list-group">
+    <li (click)="deletePost(indexOfelement)" class="list-group-item"
+    *ngFor="let post of resultList; let indexOfelement=index;"
+    >{{post.title}}</li>
+</ul>
