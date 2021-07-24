@@ -13,6 +13,7 @@ import { ValidationErrorComponent } from './sharedComponents/validation-error/va
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { PostsComponent } from './posts/posts.component';
+import { PromiseComponent } from './promise/promise.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { PostsComponent } from './posts/posts.component';
     ValidationErrorComponent,
     ReactiveFormComponent,
     ResetPasswordComponent,
-    PostsComponent
+    PostsComponent,
+    PromiseComponent
   ],
   imports: [
     BrowserModule,
