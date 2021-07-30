@@ -14,6 +14,8 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { PostsComponent } from './posts/posts.component';
 import { PromiseComponent } from './promise/promise.component';
+import { HomeComponent } from './home/home.component';
+import { LibraryComponent } from './library/library.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +27,9 @@ import { PromiseComponent } from './promise/promise.component';
     ReactiveFormComponent,
     ResetPasswordComponent,
     PostsComponent,
-    PromiseComponent
+    PromiseComponent,
+    HomeComponent,
+    LibraryComponent
   ],
   imports: [
     BrowserModule,

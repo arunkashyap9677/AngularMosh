@@ -1,0 +1,9 @@
+<div class="container">
+    <h2>Available Links</h2>
+    <ul class="list-group">
+        <li class="list-group-item"
+        *ngFor="let date of listDates"
+        ><a [routerLink]="['/library', date.month, date.year]" 
+            [queryParams]="{page:1, order: 'newest'}">{{date.month + '/' + date.year}}</a></li>
+    </ul>
+</div>
