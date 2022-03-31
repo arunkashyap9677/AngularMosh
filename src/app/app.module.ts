@@ -16,6 +16,9 @@ import { PostsComponent } from './posts/posts.component';
 import { PromiseComponent } from './promise/promise.component';
 import { HomeComponent } from './home/home.component';
 import { LibraryComponent } from './library/library.component';
+import { StoreModule } from '@ngrx/store';
+import { reducers, metaReducers } from './reducers';
+import { TestFormComponent } from './ngrxTest/test-form/test-form.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,14 +32,18 @@ import { LibraryComponent } from './library/library.component';
     PostsComponent,
     PromiseComponent,
     HomeComponent,
-    LibraryComponent
+    LibraryComponent,
+    TestFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule  
+    HttpClientModule,
+    StoreModule.forRoot(reducers, {
+      metaReducers
+    })  
   ],
   providers: [AuthorService],
   bootstrap: [AppComponent]

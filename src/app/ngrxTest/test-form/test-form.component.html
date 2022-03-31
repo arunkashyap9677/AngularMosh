@@ -16,6 +16,10 @@
             [errorPrefix]="'Comment'"></app-validation-error>
         </div>
     </div>
-      <div>{{form.get('name')!.value}}</div>
-    <div>{{form.get('comment')!.value}}</div>
+    <button class="btn btn-primary" type="button" (click)="SaveData()">Save Data</button>
+
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let detail of detailsList">{{detail.Name}}  {{detail.Comment}}</li>
+      </ul>
+    
 </form>
