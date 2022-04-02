@@ -1,3 +1,4 @@
+import { detailReducer } from './Store/Reducers/details.reducer';
 import { TextFormatterPipe } from './pipes/text-formatter.pipe';
 import { AuthorService } from './../services/author.service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -19,6 +20,8 @@ import { LibraryComponent } from './library/library.component';
 import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './reducers';
 import { TestFormComponent } from './ngrxTest/test-form/test-form.component';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,9 +44,8 @@ import { TestFormComponent } from './ngrxTest/test-form/test-form.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    StoreModule.forRoot(reducers, {
-      metaReducers
-    })  
+    StoreModule.forRoot({details: detailReducer}),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })  
   ],
   providers: [AuthorService],
   bootstrap: [AppComponent]

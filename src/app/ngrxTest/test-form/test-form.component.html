@@ -19,7 +19,7 @@
     <button class="btn btn-primary" type="button" (click)="SaveData()">Save Data</button>
 
     <ul class="list-group">
-        <li class="list-group-item" *ngFor="let detail of detailsList">{{detail.Name}}  {{detail.Comment}}</li>
+        <li class="list-group-item" *ngFor="let detail of details$ | async">{{detail.Name}}  {{detail.Comment}}</li>
       </ul>
     
 </form>
